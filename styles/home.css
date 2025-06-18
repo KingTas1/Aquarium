@@ -12,8 +12,123 @@ img {
   height: auto;
 }
 
+.l-main-nav {
+  position: absolute;
+  top: 21px;
+  inline-size: 100%;
+}
+.l-main-nav__container {
+  display: flex;
+  align-items: center;
+}
+.l-main-nav__logo {
+  font-size: 2.0625rem;
+  font-family: "Antic Didone";
+  color: #fff;
+}
+.l-main-nav__toggle-button {
+  display: none;
+}
+.l-main-nav__list {
+  flex-shrink: 0;
+  list-style-type: none;
+  display: flex;
+  list-style: none;
+}
+.l-main-nav__link {
+  font-size: 1rem;
+  font-family: "Lato";
+  color: #fff;
+  margin-inline: 16px;
+}
+.l-main-nav__phonenumber {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.l-main-navphonelogo {
+  margin-inline-end: 7px;
+}
+.l-main-nav__phonedigits {
+  font-family: "Lato";
+  color: #fff;
+}
+.l-main-nav__logo, .l-main-nav__phonenumber {
+  inline-size: 100%;
+}
+
+@media (max-width: 1130px) {
+  .l-main-nav__link {
+    margin-inline: 8px;
+  }
+}
+@media (max-width: 920px) {
+  .l-main-nav {
+    top: 0;
+    padding-block: 14px;
+  }
+  .l-main-nav--active {
+    background-color: #0c0e0d;
+    border-block-end: 1px solid rgba(255, 255, 255, 0.6);
+  }
+  .l-main-nav--active .l-main-nav__list, .l-main-nav--active .l-main-nav__phonenumber {
+    display: flex;
+  }
+  .l-main-nav__container {
+    flex-wrap: wrap;
+  }
+  .l-main-nav__logo {
+    inline-size: auto;
+    margin-inline-end: auto;
+    font-size: 1.375rem;
+  }
+  .l-main-nav__toggle-button {
+    display: inline-flex;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .l-main-nav__toggle-logo {
+    inline-size: 1.5rem;
+  }
+  .l-main-nav__list {
+    flex-direction: column;
+    inline-size: 100%;
+    margin-block: 20px;
+  }
+  .l-main-nav__link {
+    display: inline-block;
+    padding-block: 16px;
+    margin-inline: 0;
+  }
+  .l-main-nav__phonenumber {
+    padding-block-end: 16px;
+    justify-content: flex-start;
+  }
+  .l-main-nav__list, .l-main-nav__phonenumber {
+    display: none;
+  }
+}
+.u-container {
+  max-inline-size: 1100px;
+  padding-inline: 20px;
+  margin-inline: auto;
+  box-sizing: content-box;
+}
+
+@media (max-width: 1130px) {
+  .u-container {
+    max-inline-size: 850px;
+  }
+}
 body {
   font-family: "Lato";
+}
+
+.home-header {
+  height: 674px;
+  background-color: #0c0e0d;
+  position: relative;
 }
 
 /*# sourceMappingURL=home.css.map */

@@ -1,5 +1,13 @@
 @use "../base";
+@use "../layout/navbar";
+@use "../utils/classes";
 
 body {
     font-family: base.$base-text-lato;
+}
+
+.home-header {
+    height: 674px;
+    background-color: base.$dark-black;
+    position: relative;
 }
