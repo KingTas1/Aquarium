@@ -1,13 +1,131 @@
 @use "../base";
 @use "../layout/navbar";
 @use "../utils/classes";
+@use "../utils/typography";
+@use "../components/links";
 
 body {
     font-family: base.$base-text-lato;
 }
 
 .home-header {
-    height: 674px;
+    block-size: 674px;
     background-color: base.$dark-black;
+    padding-block-start: 202px;
     position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &__faded-bg {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        inline-size: 50%;
+        block-size: 100%;
+        background-color: base.$dark-black;
+        box-shadow: 0 0 100px 200px base.$dark-black;
+    }
+    &__tentacles {
+        position: absolute;
+        z-index: -2;
+        right: 0;
+        top: 0;
+        inline-size: 50%;
+        block-size: 100%;
+        object-fit: cover;
+    }
+    &__container {
+        block-size: 100%;
+        display: flex;
+        flex-direction: column;
+        color: base.$white-main;
+    }
+    &__surtitle {
+        font-size: base.$fs-18;
+        font-weight: 300;
+    }
+    &__title {
+        font-size: base.$fs-80;
+        margin-block-end: 24px;
+    }
+    &__subtitle {
+        font-size: base.$fs-18;
+        font-weight: 300;
+        margin-block-end: 14px;
+    }
+    &__cta {
+        min-inline-size: 236px;
+        align-self: flex-start;
+    }
+    &__info {
+        margin-block-start: auto;
+        display: flex;
+        gap: 32px;
+        margin-block-end: 64px;
+    }
+    &__info-paragraph {
+        display: inline-flex;
+        align-items: center;
+        font-family: base.$base-text-raleway;
+    }
+    &__info-icon {
+        inline-size: base.$fs-24;
+        margin-inline-end: 8px;
+    }
+}
+
+@media (max-width: 1130px) {
+    .home-header {
+        &__faded-bg {
+        inline-size: 40%;
+        }
+        &__tentacles {
+            inline-size: 60%;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .home-header {
+        block-size: 568px;
+        padding-block-start: 150px;
+
+        &__faded-bg,
+        &__tentacles {
+            inline-size: 100%;
+        }
+        &__faded-bg {
+            background-color: rgba(base.$dark-black, 0.6);
+        }
+        &__surtitle {
+            font-size: base.$fs-16;
+        }
+        &__title {
+            margin-block-end: 27px;
+            font-size: base.$fs-50;
+        }
+        &__subtitle {
+            font-size: base.$fs-16;
+            margin-block-end: 16px;
+        }
+        &__cta {
+            font-size: base.$fs-16;
+        }
+        &__info {
+            flex-direction: column;
+            gap: 16px;
+            margin-block-end: 32px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .home-header {
+        padding-block-start: 113px;
+        &__cta {
+            width: 100%;
+            margin-block-end: 0;
+        }
+    }
 }
