@@ -136,12 +136,20 @@ img {
   text-transform: uppercase;
 }
 
+.u-section-h2--light {
+  color: #fff;
+}
+
 .u-basic-text {
   font-size: 1.125rem;
   color: #0c0e0d;
   font-family: "Lato";
   font-weight: 300;
   line-height: 177.77%;
+}
+
+.u-basic-text--light {
+  color: #fff;
 }
 
 @media (max-width: 1130px) {
@@ -152,47 +160,6 @@ img {
 @media (max-width: 500px) {
   .u-basic-text {
     font-size: 1rem;
-  }
-}
-/* Discover section */
-.discover-section {
-  display: flex;
-  padding-block: 104px;
-}
-.discover-section__dish-img {
-  margin-inline-end: 105px;
-}
-.discover-section__h2 {
-  margin-block-end: 16px;
-}
-
-@media (max-width: 1130px) {
-  .discover-section {
-    flex-direction: column;
-    text-align: center;
-    max-inline-size: 600px;
-    padding-block: 72px 120px;
-  }
-  .discover-section__dish-img {
-    margin-inline-end: 28px;
-    margin-block-start: 44px;
-    margin-inline: auto;
-    order: 2;
-  }
-  .discover-section__text {
-    margin-block-end: 22px;
-  }
-}
-@media (max-width: 600px) {
-  .discover-section {
-    padding-block: 48px 80px;
-  }
-  .discover-section__dish-img {
-    max-inline-size: 350px;
-    inline-size: 100%;
-  }
-  .discover-section__text {
-    margin-block-end: 0;
   }
 }
 .c-gold-link {
@@ -207,6 +174,37 @@ img {
   font-weight: bold;
   text-align: center;
   display: inline-block;
+}
+
+.c-form-input {
+  padding-block: 12px;
+  padding-inline: 16px;
+  font-family: "Lato";
+  border: 1px solid rgba(12, 14, 13, 0.75);
+  inline-size: 100%;
+}
+
+.c-form-textarea {
+  padding-block: 9px;
+  padding-inline: 16px;
+  min-block-size: 131px;
+  resize: none;
+  font-family: "Lato";
+  border: 1px solid rgba(12, 14, 13, 0.75);
+  inline-size: 100%;
+}
+
+.c-gold-button {
+  font-family: "Lato";
+  font-size: 1.125rem;
+  color: #0c0e0d;
+  background-color: #E78C15;
+  padding-inline: 9px;
+  padding-block: 9px;
+  line-height: 133.33%;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
 }
 
 body {
@@ -325,6 +323,318 @@ body {
   .home-header__cta {
     width: 100%;
     margin-block-end: 0;
+  }
+}
+@media (max-width: 420px) {
+  .home-header {
+    padding-block-start: 113px;
+  }
+}
+/* Discover section */
+.discover-section {
+  display: flex;
+  padding-block: 104px;
+}
+.discover-section__dish-img {
+  margin-inline-end: 105px;
+}
+.discover-section__h2 {
+  margin-block-end: 16px;
+}
+
+@media (max-width: 1130px) {
+  .discover-section {
+    flex-direction: column;
+    text-align: center;
+    max-inline-size: 600px;
+    padding-block: 72px 120px;
+  }
+  .discover-section__dish-img {
+    margin-inline-end: 28px;
+    margin-block-start: 44px;
+    margin-inline: auto;
+    order: 2;
+  }
+  .discover-section__text {
+    margin-block-end: 22px;
+  }
+}
+@media (max-width: 600px) {
+  .discover-section {
+    padding-block: 48px 151px;
+  }
+  .discover-section__dish-img {
+    max-inline-size: 350px;
+    inline-size: 100%;
+  }
+  .discover-section__text {
+    margin-block-end: 0;
+  }
+}
+/* Dishes Section */
+.dishes-section {
+  background-color: #0c0e0d;
+}
+.dishes-section__container {
+  padding-block: 90px;
+  display: flex;
+}
+.dishes-section__content {
+  margin-inline-end: 105px;
+}
+.dishes-section__h2 {
+  margin-block-end: 16px;
+}
+.dishes-section__basic-text {
+  margin-block-end: 48px;
+}
+.dishes-section__photos {
+  display: flex;
+  margin-block-end: 56px;
+  gap: 16px;
+}
+.dishes-section__card-name, .dishes-section__card-price {
+  color: #fff;
+}
+.dishes-section__card-name {
+  margin-block-start: 16px;
+  font-size: 1.125rem;
+  line-height: 133.33%;
+}
+.dishes-section__card-price {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+.dishes-section__links {
+  display: flex;
+  gap: 24px;
+}
+.dishes-section__link {
+  min-width: 200px;
+}
+.dishes-section__side-image-container {
+  margin-block-start: -180px;
+  text-align: center;
+  color: #fff;
+}
+.dishes-section__side-image {
+  margin-block-end: 16px;
+}
+
+@media (max-width: 1130px) {
+  .dishes-section__container {
+    padding-block: 72px 120px;
+  }
+  .dishes-section__side-image-container {
+    display: none;
+  }
+  .dishes-section__content {
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .dishes-section__basic-text {
+    max-inline-size: 420px;
+  }
+}
+@media (max-width: 630px) {
+  .dishes-section__container {
+    flex-direction: column;
+    padding-block: 88px 112px;
+  }
+  .dishes-section__content {
+    order: 2;
+  }
+  .dishes-section__h2 {
+    margin-block-end: 4px;
+  }
+  .dishes-section__basic-text {
+    margin-block-end: 0px;
+  }
+  .dishes-section__card {
+    display: none;
+  }
+  .dishes-section__links {
+    flex-direction: column;
+    inline-size: 100%;
+    max-inline-size: 300px;
+  }
+  .dishes-section__side-image-container {
+    display: block;
+    margin-block-start: -142px;
+  }
+  .dishes-section__side-image {
+    inline-size: 100%;
+    max-inline-size: 350px;
+  }
+  .dishes-section__img-label {
+    margin-block-end: 42px;
+  }
+}
+/* Values section */
+.values-section {
+  padding-block: 104px;
+  display: flex;
+  gap: 100px;
+}
+.values-section__content {
+  padding-block-start: 33px;
+}
+.values-section__h2 {
+  margin-block-end: 16px;
+}
+.values-section__basic-text {
+  margin-block-end: 46px;
+}
+
+@media (max-width: 1130px) {
+  .values-section {
+    padding-block: 72px 140px;
+    max-inline-size: 550px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  .values-section__content {
+    padding-block-start: 0px;
+  }
+  .values-section__chef-img {
+    order: 2;
+    max-inline-size: 400px;
+    inline-size: 100%;
+    margin-inline: auto;
+  }
+  .values-section__decoration-img {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .values-section {
+    padding-block: 48px 120px;
+  }
+}
+/* Reservation section */
+.reservation-section {
+  background-color: #0c0e0d;
+}
+.reservation-section__container {
+  display: flex;
+  padding-block: 90px;
+}
+.reservation-section__h2 {
+  margin-block-end: 16px;
+}
+.reservation-section__info {
+  inline-size: 100%;
+}
+.reservation-section__schedule-sunday, .reservation-section__dress-code {
+  margin-block-end: 31px;
+}
+.reservation-section__demarcation {
+  inline-size: 2px;
+  background-color: #fff;
+  margin-inline: 62px;
+}
+.reservation-section__more-info {
+  padding-inline-start: 62px;
+}
+.reservation-section__location {
+  margin-block-end: 7px;
+}
+.reservation-section__social-networks {
+  margin-block-end: 39px;
+}
+.reservation-section__link {
+  color: #fff;
+  margin-inline-start: 4px;
+  text-decoration: underline;
+}
+.reservation-section__end-picture {
+  inline-size: 100%;
+  max-block-size: 237px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 1130px) {
+  .reservation-section__container {
+    max-inline-size: 600px;
+    padding-block: 72px 128px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .reservation-section__dress-code {
+    max-inline-size: 400px;
+    margin-inline: auto;
+  }
+  .reservation-section__demarcation {
+    inline-size: 50%;
+    block-size: 1px;
+    margin-block: 42px;
+    margin-inline: auto;
+  }
+}
+@media (max-width: 600px) {
+  .reservation-section__container {
+    padding-block: 48px 120px;
+  }
+}
+/* Contact section */
+.contact-section {
+  display: flex;
+  gap: 113px;
+  padding-block: 104px;
+}
+.contact-section__h2 {
+  margin-block-end: 26px;
+}
+.contact-section__basic-text {
+  margin-block-end: 24px;
+}
+.contact-section__form {
+  display: flex;
+  gap: 57px;
+}
+.contact-section__side-img {
+  align-self: flex-start;
+}
+.contact-section__label {
+  font-size: 0.875rem;
+}
+.contact-section__input {
+  margin-block: 8px 16px;
+}
+.contact-section__textarea {
+  margin-block: 8px 32px;
+}
+.contact-section__submit-button {
+  inline-size: 100%;
+}
+
+@media (max-width: 1130px) {
+  .contact-section {
+    padding-block: 72px 112px;
+    flex-direction: column;
+    max-inline-size: 600px;
+    text-align: center;
+  }
+  .contact-section__side-img {
+    display: none;
+  }
+  .contact-section__main-decoration-img {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .contact-section {
+    padding-block: 48px 112px;
+  }
+}
+@media (max-width: 450px) {
+  .contact-section {
+    padding-block: 62px;
   }
 }
 
