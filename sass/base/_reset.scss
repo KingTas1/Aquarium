@@ -1,3 +1,5 @@
+@use "./theme";
+
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
@@ -8,4 +10,8 @@ a {
 }
 img{
     height: auto;
+}
+
+body {
+    font-family: theme.$base-text-lato;
 }

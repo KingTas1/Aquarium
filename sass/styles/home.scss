@@ -1,14 +1,12 @@
 @use "../base";
 @use "../layout/navbar";
+@use "../layout/footer";
 @use "../utils/classes";
 @use "../utils/typography";
 @use "../components/links";
 @use "../components/form";
 @use "../components/button";
 
-body {
-    font-family: base.$base-text-lato;
-}
 
 .home-header {
     block-size: 674px;
@@ -307,6 +305,7 @@ body {
 @media (max-width: 1130px) {
     .values-section {
         padding-block: 72px 140px;
+        /* On utilise pas 600px pour faire passer le of seafood et pas seulement le seafood */
         max-inline-size: 550px;
         flex-direction: column;
         gap: 10px;
